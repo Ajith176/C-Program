@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<math.h>
+int main() 
+{
+ float principal,rate,time,si,ci;
+ int n;
+    printf("enter the principle amount :");
+    scanf("%f",& principal);
+    printf("enter the  interest rate :");
+    scanf("%f",& rate);
+    printf("enter the time perod in years :");
+    scanf("%f",&time);
+    //caculate simple interest
+    si=(principal*rate*time)/100;
+    printf("simple interest : %.2f\n",si);
+    //calculating compound interst
+    printf(" enter the number of times interst is compound per year:");
+    scanf("%d,&n");
+    ci=principal*pow((1+rate/(n*100)),(n*time))-principal;
+    printf(" compound interest: %.2f\n",ci);
+   
+    return 0;
+}
